@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
+
+	"github.com/atotto/clipboard"
 )
 
 const defaultCharset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:,.<>?/"
@@ -57,7 +59,6 @@ func main() {
 	}
 }
 
-// todo implement clipboard copy
 func CopyToClipboard(text string) error {
-	return nil
+	return clipboard.WriteAll(text)
 }
